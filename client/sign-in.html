@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Sign In – Nexus Haven</title>
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/auth.css"/>
+  <script src="js/theme.js" defer></script>
+</head>
+<body>
+<header class="glass-bar">
+  <a href="index.html" class="logo"><img src="assets/logo white.png" alt="Nexus Haven"/></a>
+    <h1 class="title">Sign In</h1>
+    <button id="themeToggle" title="Dark/light mode">
+        <img src="assets/icons8-toggle-on-50.png" class="dark" alt="mode">
+      </button>
+  </header>
+
+<main class="auth-box">
+  <form id="signInForm" autocomplete="off">
+    <h2>Welcome Back</h2>
+
+    <label>Email</label>
+    <input type="email" id="email" required placeholder="you@example.com"/>
+
+    <label>Password</label>
+    <div class="pwd-wrap">
+      <input type="password" id="password" required placeholder="Password"/>
+      <span class="toggle-pwd" onclick="togglePwd()">
+        <img class="lock" src="assets/icons8-password-key-50.png" alt="show/hide">
+      </span>
+    </div>
+
+    <button type="submit" class="glass-btn"  >Sign In</button>
+    <p class="swap">No account? <a href="sign-up.html">Sign up</a></p>
+  </form>
+</main>
+
+<script type="module" src="js/sign-in.js"></script>
+
+<script>
+/* ---- spy logger ---- */
+function showGreenPopUp(msg) {
+  const pop = document.createElement('div');
+  pop.className = 'pop-up green';
+  pop.textContent = msg;
+  document.body.appendChild(pop);
+  setTimeout(() => pop.remove(), 3000);
+  console.log('🟢 GREEN:', msg);
+}
+function showRedPopUp(msg) {
+  const pop = document.createElement('div');
+  pop.className = 'pop-up red';
+  pop.textContent = msg;
+  document.body.appendChild(pop);
+  setTimeout(() => pop.remove(), 3000);
+  console.log('🔴 RED:', msg);
+}
+</script>
+</body>
+</html>
