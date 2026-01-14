@@ -7,6 +7,40 @@
   background:var(--glass);backdrop-filter:blur(10px);
   border-bottom:1px solid var(--accent);
 }
+
+/*-----RPM BTN------*/
+ .glass-btnz {
+   margin-top: 1.5rem;
+  padding: .8rem 1.8rem;
+  border-radius: 50px;
+  border:1px solid var(--accent);
+  background:var(--glass);
+  color:var(--text);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .3s ease;
+
+}
+.glass-btnz:hover {
+  background: rgba(83, 58, 228, 0.473);
+  border-color: rgba(72, 255, 112, 0.555);
+  transform: scale(1.2);
+}
+.balotbox{
+  width:60%;
+  padding:0.8rem;
+  border-radius:11px;
+  border:1px solid var(--accent);
+  background:var(--glass);
+  color:var(--text);
+  font-size:1rem;
+  font-weight:500;
+  outline:none;
+  box-sizing:border-box;
+  margin-top:1rem;
+}
+
+
 /* ---- universal button styles ---- */
 .glass-btn,
 .glass-btn-red {
@@ -19,6 +53,7 @@
   cursor: pointer;
   transition: all .3s ease;
 }
+
 
 /* ---- green button ---- */
 .glass-btn {
